@@ -1,0 +1,135 @@
+body {
+  padding: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.content div[class^="col"] {
+    padding: 0.3em;
+}
+
+
+.banner {
+  background-image: url("../images/wifi-logo.jpg");
+  background-color: white !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+.credits {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.credits .counter h1 {
+  color: #B22222;
+  font-size: 8em;
+}
+
+.hour {
+  text-align: center;
+}
+
+.box {
+    border-radius: 25px;
+    border: 2px solid;
+    min-height: 150px;
+    background-color: #FFF5EE;
+}
+
+.price h1 {
+	font-size: 7.5em;
+}
+
+.hours h1 {
+	font-size: 2em;
+}
+
+.hour {
+    padding-top: 1em;
+    height: 15em;
+}
+
+.head {
+    height: 19em;
+}
+
+.plans {
+  margin-top: 0.4em;
+}
+
+body {
+    background-image: url("../images/darkblue.png");
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.overlay-container {
+  border-radius: 25px;
+  border: black 10px solid;
+  height: 20em;
+  width: 40em;
+  background-color: #FFF5EE;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  padding: 4em;
+  font-family: Arial Black;
+  text-align: center;
+}
+
+.error-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+#errorOverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.error-overlay-container {
+  border-radius: 25px;
+  border: #B22222 10px solid;
+  height: 20em;
+  width: 40em;
+  background-color: #FFF5EE;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  padding: 4em;
+  font-family: Arial Black;
+  text-align: center;
+}

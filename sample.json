@@ -1,0 +1,8 @@
+[
+  {"num": "1", "plan": "A", "username": "adsad1", "password": "asdasd1"},
+  {"num": "2", "plan": "A", "username": "adsad2", "password": "asdasd2"},
+  {"num": "3", "plan": "B", "username": "adsad3", "password": "asdasd3"},
+  {"num": "4", "plan": "B", "username": "adsad4", "password": "asdasd4"},
+  {"num": "5", "plan": "C", "username": "adsad5", "password": "asdasd5"},
+  {"num": "6", "plan": "C", "username": "adsad6", "password": "asdasd6"}
+]

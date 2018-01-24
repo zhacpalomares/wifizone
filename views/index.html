@@ -1,0 +1,99 @@
+<html>
+<head>
+  <title>WTF</title>
+  <link href="stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="stylesheets/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <div id="overlay">
+    <div class="overlay-container">
+      <h1></h1>
+    </div>
+  </div>
+
+  <div id="errorOverlay">
+    <div class="error-overlay-container">
+      <img class="error-icon" src="/images/error.png"/>
+      <h1></h1>
+    </div>
+  </div>
+
+  <div class="container content">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="box head banner">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box head credits">
+          <div>
+            <h1>CREDITS</h1>
+          </div>
+          <div class="counter">
+            <h1>₱<span id="value"></span></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row plans">
+      <div class="col-md-4">
+        <div class="box hour">
+          <div class="row">
+  					<div class="col-lg-12 price">
+  						<h1>₱1</h1>
+  					</div>
+  				</div>
+  				<div class="row">
+  					<div class="col-lg-12 hours">
+  						<h1>10 mins</h1>
+  					</div>
+  				</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box hour">
+          <div class="row">
+  					<div class="col-lg-12 price">
+  						<h1>₱5</h1>
+  					</div>
+  				</div>
+  				<div class="row">
+  					<div class="col-lg-12 hours">
+  						<h1>1 hour</h1>
+  					</div>
+  				</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box hour">
+          <div class="row">
+  					<div class="col-lg-12 price">
+  						<h1>₱12</h1>
+  					</div>
+  				</div>
+  				<div class="row">
+  					<div class="col-lg-12 hours">
+  						<h1>3 hours</h1>
+  					</div>
+  				</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascripts/jquery/jquery.min.js"></script>
+  <script src="javascripts/wifizone/app.js"></script>
+  <script src="javascripts/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    $(document).ready(function(){
+      $('#wifizone-modal').modal({
+        keyboard: false
+      });
+
+      $('#wifizone-modal').modal('hide');
+    });
+  </script>
+</body>
+</html>
