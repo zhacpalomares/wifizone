@@ -17,9 +17,9 @@ MongoClient.connect(url, function(err, db) {
         console.log("plans collection is created!");
 
         var plans = [
-          {plan_code: 'A', price: 1, minutes: 10},
-          {plan_code: 'C', price: 5, minutes: 60},
-          {plan_code: 'D', price: 12, minutes: 180}
+          {plan_code: 'A', price: 5, minutes: 60, label: '1 HOUR'},
+          {plan_code: 'B', price: 10, minutes: 180, label: '3 HOURS'},
+          {plan_code: 'C', price: 30, minutes: 1440, , label: '1 DAY'}
         ]
 
         dbo.collection('plans').insertMany(plans, function(err, response) {
@@ -29,7 +29,12 @@ MongoClient.connect(url, function(err, db) {
           dbo.collection("credit").insertOne( {total_credit: 0, status: 'MAIN'}, function(err, res) {
             if (err) throw err;
             console.log("1 document inserted to credit");
-            db.close();
+
+            dbo.createCollection("emv", function(err, res) {
+              dbo.collection("emv").insertOne({ val: null, status: 'MAIN' }, function(err, res) {
+                db.close();
+              });
+            });
           });
         });
       });

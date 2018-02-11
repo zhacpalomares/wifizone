@@ -5,11 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
+var emv = require('serial-number');
 
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
-
-var index = require('./routes/index');
 
 var app = express();
 
@@ -26,12 +25,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-
 MongoClient.connect(url, function(err, db) {
   var dbo = db.db("wifizone");
-  require('./routes/credits')(app, dbo);
-  require('./routes/vouchers')(app, dbo);
+
+  dbo.collection("emv").findOne({status:'MAIN'}, function(err, res) {
+    emv(function (err, value) {
+      if (value == res.val) {
+        app.use('/', require('./routes/index'));
+
+        require('./routes/credits')(app, dbo);
+        require('./routes/vouchers')(app, dbo);
+        require('./routes/plans')(app, dbo);
+        console.log('EMV serial is verified');
+      } else {
+        console.log('Application cannot run, contact your administrtor.');
+      }
+    });
+  });
 });
 
 app.use(function (err, req, res, next) {

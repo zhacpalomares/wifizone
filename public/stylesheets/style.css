@@ -10,6 +10,13 @@ a {
     padding: 0.3em;
 }
 
+.container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 
 .banner {
   background-image: url("../images/wifi-logo.jpg");
@@ -47,6 +54,41 @@ a {
 	font-size: 7.5em;
 }
 
+.overlay-h1 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  color: #B22222;
+}
+
+.overlay-content label {
+  font-size: 1em;
+}
+
+.blur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.overlay-content {
+  border: dashed 2px;
+  text-align: center;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.overlay-content input {
+  width: 15em;
+  font-family: 'Courier New';
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
 .hours h1 {
 	font-size: 2em;
 }
@@ -57,7 +99,7 @@ a {
 }
 
 .head {
-    height: 19em;
+    height: 22em;
 }
 
 .plans {
@@ -85,7 +127,7 @@ body {
 .overlay-container {
   border-radius: 25px;
   border: black 10px solid;
-  height: 20em;
+  height: 28em;
   width: 40em;
   background-color: #FFF5EE;
   position: absolute;
@@ -133,3 +175,48 @@ body {
   font-family: Arial Black;
   text-align: center;
 }
+
+
+.timerwrapper {
+  height: 2em;
+  width: 100%;
+  background: black;
+  position: relative;
+  margin: auto;
+}
+.shrinking{
+    width: 100%;
+    height: 2em;
+    position: absolute;
+    bottom: 0;
+/*    animation: fillBar 1s ease-in infinite; */
+    -webkit-animation-name: fillBar;
+        animation-name: fillBar;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+/*    animation-delay: 2s; */
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    background-color: #B22222;
+}
+
+@-webkit-keyframes fillBar {
+      0% {
+        width: 100%;
+      }
+      100% {
+        width: 0%;
+      }
+  }
+  @keyframes fillBar {
+      0% {
+        width: 100%;
+      }
+      100% {
+        width: 0%;
+      }
+  }
