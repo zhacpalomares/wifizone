@@ -39,6 +39,10 @@ a {
   font-size: 8em;
 }
 
+.plan_ready {
+  color: #B22222;
+}
+
 .hour {
   text-align: center;
 }
@@ -127,8 +131,8 @@ body {
 .overlay-container {
   border-radius: 25px;
   border: black 10px solid;
-  height: 28em;
-  width: 40em;
+  height: 30em;
+  width: 45em;
   background-color: #FFF5EE;
   position: absolute;
   top: 50%;

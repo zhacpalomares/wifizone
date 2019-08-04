@@ -113,6 +113,7 @@ $(document).ready(function(){
     disabledButton = true;
     $('#overlay').css('display', 'block');
     $('.overlay-h1').text('(PRESS ANY BUTTON TO SHOW)');
+    $('.plan_ready_container').html('<h3>YOUR <span class="plan_ready">' + getPlanLabel(obj.plan) + '</span> VOUCHER IS READY</h3>')
 
     voucherBlured = true;
     $('.overlay-content').addClass('blur');
@@ -120,6 +121,20 @@ $(document).ready(function(){
 
     displayCredit();
   };
+
+  function getPlanLabel(plan) {
+    switch (plan) {
+      case 'A':
+        return "1 HOUR"
+        break;
+      case 'B':
+        return "3 HOUR"
+        break;
+      case 'C':
+        return "1 DAY"
+        break;
+    }
+  }
 
   function removeBlur() {
     $('.overlay-content').removeClass('blur');
